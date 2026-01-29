@@ -31,15 +31,16 @@ function M.get(c, opts)
 		["@function"] = "Function",
 		["@type.definition"] = "Typedef",
 		["@type.builtin"] = "@type",
-
+		["@variable"] = { fg = c.fg },
+		["@module"] = { fg = c.fg },
 		["@punctuation.bracket"] = "Delimiter",
 		["@punctuation.delimiter"] = { fg = c.subtle },
-		["@variable"] = { fg = c.fg },
-		["@variable.builtin"] = { fg = c.fg },
-		["@variable.parameter"] = { fg = c.fg },
-		["@nospell"] = { fg = c.fg },
-		["@constant.builtin"] = { fg = c.fg },
-		["@module"] = { fg = c.fg },
+
+		-- ["@variable.builtin"] = { fg = c.fg },
+		-- ["@variable.parameter"] = { fg = c.fg },
+
+		-- ["@nospell"] = { fg = c.fg },
+		-- ["@constant.builtin"] = { fg = c.fg },
 
 		-- -- TODO
 		-- -- Annotations / attributes

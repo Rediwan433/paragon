@@ -2,44 +2,30 @@
 local colors = {
 	-- structure
 	none = "NONE",
-	red = "#D04E63",
-	green = "#70C270",
+	jade = "#70C270", -- keywords
+	ember = "#EE9A63", -- string
+	gild = "#D6C27A", -- numbers, bools
+	azure = "#A7E3E6", -- function names
+	ichor = "#6F9FA4", -- types
+	smoke = "#566669", -- comments
+
+	subtle = "#798689", -- brackes, puntuation
 
 	fg = "#ECF5F5", -- text
-	bg = "#15181a", -- base (15181a, 161B20, 16181b)
-	overlay = "#171C1E", -- cmp, lsp, etc
-	surface = "#191E20",
-	highlight_low = "#161d1d", -- algo muy discreto
-	highlight_med = "#1A2323", -- cursorline
-	highlight_high = "#1F2929", -- visual
+	bg = "#15181a", -- base
+	surface = "#171C1E",
+	highlight_low = "#161d1d",
+	highlight_med = "#1A2323",
+	highlight_high = "#1F2929",
 
-	muted = "#566669", -- muted
+	overlay = "#191E20",
 
-	subtle = "#c7c7c7", --no text, guias de indent
-
-	yellow = "#FFB870",
-	orange = "#FF9272",
-	blue = "#2572BE",
-	cyan = "#6EC2C2",
 	magenta = "#D799E0",
+	purple = "#c4a7e7",
+	red = "#D04E63",
+	gray = "#5eacd3,",
 
-	-- notifications
-	error = "#f44336",
-	warning = "#ff9800",
-	info = "#00bcd4",
-	hint = "#4caf50",
-
-	-- fg = "#e0def4",
-	-- bg = "NONE",
-	-- yellow = "#f6c177",
-	-- cyan = "#9ccfd8",
-	-- green = "#b6e07d",
-	-- orange = "#ea9a97",
-	-- violet = "#c4a7e7",
-	-- magenta = "#e84a5f",
-	-- blue = "#3e8fb0",
-	-- red = "#eb6f92",
-
+	-- bg_dim = "#101315",
 	-- fg_sidebar = "#C0C0C0", -- texto en barras laterales
 	-- fg_float = "#E8EAED", -- texto en ventanas flotantes
 	-- bg_float = "#202124", -- fondo de ventanas flotantes
