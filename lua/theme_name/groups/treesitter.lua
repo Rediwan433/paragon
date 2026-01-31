@@ -1,17 +1,12 @@
 local M = {}
 
----@param c theme_name.Palette
----@param opts theme_name.Config
+---@type theme_name.HighlightsFn
 function M.get(c, opts)
 	local ret = {
 
-		-- =====================================================
-		-- Core links / Defaults (NO TOCAR)
-		-- Fallbacks semánticos base → grupos clásicos
-		-- =====================================================
-		-- DONE
 		["@comment"] = "Comment",
 		["@keyword"] = "Statement",
+		["@keyword.operator"] = { fg = c.subtle },
 		["@keyword.return"] = "@keyword",
 		["@string"] = "String",
 		["@string.documentation"] = "@string",
@@ -42,60 +37,58 @@ function M.get(c, opts)
 		-- ["@nospell"] = { fg = c.fg },
 		-- ["@constant.builtin"] = { fg = c.fg },
 
-		-- -- TODO
-		-- -- Annotations / attributes
-		-- ["@annotation"] = "PreProc",
+		["@annotation"] = "PreProc",
 		--
 		-- -- Literals
-		-- ["@character"] = "Character",
-		-- ["@character.printf"] = "SpecialChar",
-		-- ["@character.special"] = "SpecialChar",
+		["@character"] = "Character",
+		["@character.printf"] = "SpecialChar",
+		["@character.special"] = "SpecialChar",
 		--
 		-- -- Constants
-		-- ["@constant.macro"] = "Define",
+		["@constant.macro"] = "Define",
 		--
 		-- -- Functions
-		-- ["@function.call"] = "@function",
-		-- ["@function.macro"] = "Macro",
-		-- ["@function.method"] = "Function",
-		-- ["@function.method.call"] = "@function.method",
+		["@function.call"] = "@function",
+		["@function.macro"] = "Macro",
+		["@function.method"] = "Function",
+		["@function.method.call"] = "@function.method",
 		--
 		-- -- Keywords
-		-- ["@keyword.conditional"] = "Conditional",
-		-- ["@keyword.debug"] = "Debug",
-		-- ["@keyword.directive"] = "PreProc",
-		-- ["@keyword.directive.define"] = "Define",
-		-- ["@keyword.exception"] = "Exception",
-		-- ["@keyword.repeat"] = "Repeat",
-		-- ["@keyword.storage"] = "StorageClass",
+		["@keyword.conditional"] = "Conditional",
+		["@keyword.debug"] = "Debug",
+		["@keyword.directive"] = "PreProc",
+		["@keyword.directive.define"] = "Define",
+		["@keyword.exception"] = "Exception",
+		["@keyword.repeat"] = "Repeat",
+		["@keyword.storage"] = "StorageClass",
 		--
 		-- -- Types / modules
-		-- ["@type.qualifier"] = "@keyword",
-		-- ["@namespace.builtin"] = "@variable.builtin",
+		["@type.qualifier"] = "@keyword",
+		["@namespace.builtin"] = "@variable.builtin",
 		--
 		-- -- Tags (HTML / JSX / etc)
-		-- ["@tag"] = "Label",
-		-- ["@tag.attribute"] = "@property",
-		-- ["@tag.delimiter"] = "Delimiter",
+		["@tag"] = "Label",
+		["@tag.attribute"] = "@property",
+		["@tag.delimiter"] = "Delimiter",
 		--
 		-- -- Diff
-		-- ["@diff.plus"] = "DiffAdd",
-		-- ["@diff.minus"] = "DiffDelete",
-		-- ["@diff.delta"] = "DiffChange",
+		["@diff.plus"] = "DiffAdd",
+		["@diff.minus"] = "DiffDelete",
+		["@diff.delta"] = "DiffChange",
 		--
 		-- -- Markup (generic)
-		-- ["@markup"] = "@none",
-		-- ["@markup.environment"] = "Macro",
-		-- ["@markup.environment.name"] = "Type",
-		-- ["@markup.heading"] = "Title",
-		-- ["@markup.link.label"] = "SpecialChar",
-		-- ["@markup.link.label.symbol"] = "Identifier",
-		-- ["@markup.link.url"] = "Underlined",
-		-- ["@markup.math"] = "Special",
-		-- ["@markup.raw"] = "String",
+		["@markup"] = "@none",
+		["@markup.environment"] = "Macro",
+		["@markup.environment.name"] = "Type",
+		["@markup.heading"] = "Title",
+		["@markup.link.label"] = "SpecialChar",
+		["@markup.link.label.symbol"] = "Identifier",
+		["@markup.link.url"] = "Underlined",
+		["@markup.math"] = "Special",
+		["@markup.raw"] = "String",
 		--
 		-- -- Misc
-		-- ["@none"] = {},
+		["@none"] = {},
 		--
 		-- -- =====================================================
 		-- -- Personalización / Overrides

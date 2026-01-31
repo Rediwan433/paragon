@@ -1,64 +1,51 @@
+local Util = require("theme_name.util")
+
 local M = {}
 
--- Mapeo de plugins a sus archivos de highlight groups
 -- stylua: ignore
 M.plugins = {
   ["snacks.nvim"]                   = "snacks",
 }
 
----@param name string
----@return table
+local me = debug.getinfo(1, "S").source:sub(2)
+me = vim.fn.fnamemodify(me, ":h")
+
 function M.get_group(name)
-	local ok, mod = pcall(require, "theme_name.groups." .. name)
-	if not ok then
-		vim.notify("Failed to load group: " .. name, vim.log.levels.WARN)
-		return {
-			get = function()
-				return {}
-			end,
-		}
-	end
-	return mod
+	---@type {get: theme_name.HighlightsFn, url: string}
+	return Util.mod("theme_name.groups." .. name)
 end
 
----@param name string
----@param colors theme_name.Palette
+---@param colors theme_name.ColorScheme
 ---@param opts theme_name.Config
----@return table<string, vim.api.keyset.highlight>
 function M.get(name, colors, opts)
 	local mod = M.get_group(name)
 	return mod.get(colors, opts)
 end
 
----@param colors theme_name.Palette
+---@param colors theme_name.ColorScheme
 ---@param opts theme_name.Config
----@return table<string, vim.api.keyset.highlight>
 function M.setup(colors, opts)
-	-- Grupos que siempre se cargan
 	local groups = {
 		base = true,
 		kinds = true,
-		["semantic-token"] = true,
+		semantic_tokens = true,
 		treesitter = true,
 	}
 
-	-- Mergear todos los highlight groups
+	local names = vim.tbl_keys(groups)
+	table.sort(names)
+
 	local ret = {}
+	-- merge highlights
 	for group in pairs(groups) do
-		local highlights = M.get(group, colors, opts)
-		for hl_name, hl_def in pairs(highlights) do
-			ret[hl_name] = hl_def
+		for k, v in pairs(M.get(group, colors, opts)) do
+			ret[k] = v
 		end
 	end
+	Util.resolve(ret)
+	opts.on_highlights(ret, colors)
 
-	-- Resolver links (si un highlight apunta a otro por string)
-	for hl_name, hl_def in pairs(ret) do
-		if type(hl_def) == "string" then
-			ret[hl_name] = { link = hl_def }
-		end
-	end
-
-	return ret
+	return ret, groups
 end
 
 return M

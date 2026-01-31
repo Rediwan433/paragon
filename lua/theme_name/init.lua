@@ -3,11 +3,12 @@ local config = require("theme_name.config")
 
 local M = {}
 
-function M.load()
-	vim.o.background = "dark"
+---@param opts? theme_name.Config
+function M.load(opts)
+	opts = require("theme_name.config").extend(opts)
 
-	-- tengo que cambiar la manera del setup
-	return require("theme_name.theme").setup()
+	vim.o.background = "dark"
+	return require("theme_name.theme").setup(opts)
 end
 
 M.setup = config.setup

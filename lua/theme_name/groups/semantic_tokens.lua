@@ -1,6 +1,6 @@
 local M = {}
 
----@param c theme_name.Palette
+---@type theme_name.HighlightsFn
 function M.get(c)
   -- stylua: ignore
   return {
