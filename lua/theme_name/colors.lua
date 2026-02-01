@@ -45,9 +45,9 @@ function M.setup(opts)
 
 	colors.diff = {
 		add = "#1F2B22",
-		change = "#2A3234",
-		delete = "#321E23",
-		text = "#6F8A8F",
+		change = "#1c212b",
+		delete = "#2a1c1e",
+		text = "#2a3a4a",
 	}
 
 	if opts.terminal_colors then

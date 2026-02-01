@@ -4,17 +4,15 @@ local M = {}
 function M.get(c, opts)
 	return {
 
-		-- Aca hay dudas sobre el color
 		Search = { bg = c.highlight_med, fg = c.fg },
 		IncSearch = { bg = c.ember, fg = c.bg, bold = true },
 		Substitute = { bg = c.ember, fg = c.bg },
 		MatchParen = { bg = c.highlight_high, fg = c.gild, bold = true },
 
-		-- Diff Quiero tener el mejor diff del planeta
 		DiffAdd = { bg = c.diff.add },
 		DiffChange = { bg = c.diff.change },
-		DiffDelete = { bg = c.diff.delete },
-		DiffText = { bg = c.diff.text, fg = c.fg },
+		DiffDelete = { bg = c.diff.delete, fg = c.wyrm, nocombine = true },
+		DiffText = { bg = c.diff.text },
 		diffAdded = { fg = c.jade }, -- OBSOLETO: legacy lowercase
 		diffRemoved = { fg = c.wyrm }, -- OBSOLETO: legacy lowercase
 		diffChanged = { fg = c.ember }, -- OBSOLETO: legacy lowercase
@@ -146,11 +144,11 @@ function M.get(c, opts)
 		SpecialKey = { fg = c.subtle },
 		Whitespace = { fg = c.subtle },
 		EndOfBuffer = { fg = c.fg_dim },
-		Directory = { fg = c.azure }, -- a definir
+		Directory = { fg = c.azure },
 
 		-- Editor: Folds (DONE)
 		Folded = { fg = c.jade, bg = opts.transparent and c.none or c.bg },
-		FoldColumn = { fg = c.fg_dim }, -- probar si se rompe con trasnparent
+		FoldColumn = { fg = c.fg_dim },
 
 		-- UI: Floats (DONE)
 		NormalFloat = { fg = c.fg, bg = c.surface },
@@ -159,20 +157,20 @@ function M.get(c, opts)
 
 		-- Quickfix (DONE)
 		qfFileName = { fg = c.azure },
-		qfLineNr = { fg = c.fg },
+		qfLineNr = { fg = c.fg_dim },
 		QuickFixLine = { bg = c.highlight_med, bold = true },
 
 		-- Editor: Windows (DONE)
 		VertSplit = { fg = c.subtle, bg = c.none },
-		WinSeparator = { fg = c.subtle, bold = true },
+		WinSeparator = { fg = c.bg },
 		NormalSB = { fg = c.fg, bg = opts.transparent and c.none or c.bg_dim },
 
 		-- Editor: Columns (DONE)
-		SignColumn = { fg = c.fg_dim }, -- Chequear si falla con transparent (si se ve feo)
+		SignColumn = { fg = c.fg_dim },
 		SignColumnSB = { fg = c.fg_dim }, -- OBSOLETO: plugin-specific
 
 		-- LSP: Core (DONE)
-		LspReferenceText = { bg = c.highlight_high }, -- Otro color como el de search?
+		LspReferenceText = { bg = c.highlight_high },
 		LspReferenceRead = { bg = c.highlight_high },
 		LspReferenceWrite = { bg = c.highlight_high },
 		LspSignatureActiveParameter = { bg = c.highlight_high, bold = true },
