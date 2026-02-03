@@ -3,6 +3,43 @@ local M = {}
 ---@type theme_name.HighlightsFn
 function M.get(c, opts)
 	return {
+		Special = { fg = c.azure }, -- X
+		SpecialChar = { fg = c.gild }, -- X
+		Character = { fg = c.gild }, -- X
+		Boolean = { fg = c.gild },
+
+		Constant = { fg = c.gild }, -- X
+		Number = { fg = c.gild },
+		Float = { fg = c.gild },
+		Function = { fg = c.azure },
+		Typedef = { fg = c.ichor },
+		Type = { fg = c.ichor },
+		Normal = { fg = c.fg, bg = opts.transparent and c.none or c.bg },
+		Comment = { fg = c.smoke, style = opts.styles.comments },
+		String = { fg = c.ember },
+		Identifier = { fg = c.azure },
+		Statement = { fg = c.jade },
+		Conditional = { fg = c.jade },
+		Repeat = { fg = c.jade },
+		Label = { fg = c.jade },
+		Operator = { fg = c.subtle },
+		Keyword = { fg = c.jade, style = opts.styles.keywords },
+		Exception = { fg = c.jade },
+		PreProc = { fg = c.jade },
+		Include = { fg = c.jade },
+		Define = { fg = c.jade },
+		Macro = { fg = c.jade },
+		PreCondit = { fg = c.jade },
+		StorageClass = { fg = c.jade },
+		Structure = { fg = c.jade },
+		Delimiter = { fg = c.subtle },
+		SpecialComment = { fg = c.smoke, italic = true },
+		Underlined = { underline = true },
+		Bold = { bold = true, fg = c.fg },
+		Italic = { italic = true, fg = c.fg },
+		Debug = { fg = c.gild },
+		Todo = { fg = c.gild, bold = true },
+		Error = { fg = c.wyrm },
 
 		Search = { bg = c.highlight_med, fg = c.fg },
 		IncSearch = { bg = c.ember, fg = c.bg, bold = true },
@@ -19,7 +56,7 @@ function M.get(c, opts)
 
 		diffLine = { fg = c.smoke }, -- OBSOLETO: legacy lowercase
 		diffFile = { fg = c.azure }, -- OBSOLETO: legacy lowercase
-		diffIndexLine = { fg = c.arcana }, -- OBSOLETO: legacy lowercase
+		diffIndexLine = { fg = c.gild }, -- OBSOLETO: legacy lowercase
 		diffOldFile = { fg = c.fg_dim, bg = c.diff.delete },
 		diffNewFile = { fg = c.fg_dim, bg = c.diff.add },
 
@@ -90,42 +127,6 @@ function M.get(c, opts)
 		WarningMsg = { fg = c.warning },
 
 		-- DONE
-		Normal = { fg = c.fg, bg = opts.transparent and c.none or c.bg },
-		Comment = { fg = c.smoke, style = opts.styles.comments },
-		Constant = { fg = c.gild },
-		String = { fg = c.ember },
-		Character = { fg = c.gild },
-		Number = { fg = c.gild },
-		Boolean = { fg = c.gild },
-		Float = { fg = c.gild },
-		Identifier = { fg = c.fg },
-		Function = { fg = c.azure },
-		Statement = { fg = c.jade },
-		Conditional = { fg = c.jade },
-		Repeat = { fg = c.jade },
-		Label = { fg = c.jade },
-		Operator = { fg = c.subtle },
-		Keyword = { fg = c.jade, style = opts.styles.keywords },
-		Exception = { fg = c.jade },
-		PreProc = { fg = c.jade },
-		Include = { fg = c.jade },
-		Define = { fg = c.jade },
-		Macro = { fg = c.jade },
-		PreCondit = { fg = c.jade },
-		Type = { fg = c.ichor },
-		StorageClass = { fg = c.jade },
-		Structure = { fg = c.jade },
-		Typedef = { fg = c.ichor },
-		Special = { fg = c.gild },
-		SpecialChar = { fg = c.gild },
-		Delimiter = { fg = c.subtle },
-		SpecialComment = { fg = c.smoke, italic = true },
-		Underlined = { underline = true },
-		Bold = { bold = true, fg = c.fg },
-		Italic = { italic = true, fg = c.fg },
-		Debug = { fg = c.gild },
-		Todo = { fg = c.gild, bold = true },
-		Error = { fg = c.wyrm },
 
 		-- UI: Status / Tab (DONE)
 		StatusLine = { fg = c.fg, bg = opts.transparent and c.none or c.overlay },

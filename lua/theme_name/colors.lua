@@ -7,14 +7,17 @@ function M.setup(opts)
 	---@class Palette
 	local palette = {
 		-- structure
-		jade = "#70C270", -- keywords
+		jade = "#70C270",
 		wyrm = "#D04E63",
-		ember = "#EE9A63", -- string
-		gild = "#D6C27A", -- numbers, bools
-		arcana = "#C2A9E1",
-		azure = "#A7E3E6", -- function names
-		ichor = "#6F9FA4", -- types
-		smoke = "#566669", -- comments
+		ember = "#EE9A63",
+		gild = "#E7C27A",
+		arcana = "#B8A0D9",
+		azure = "#9AD7DA",
+		ichor = "#649892",
+
+		t = "#FF00B3",
+
+		smoke = "#748488",
 
 		fg = "#ECF5F5",
 		bg = "#15181a",

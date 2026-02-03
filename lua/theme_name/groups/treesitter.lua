@@ -16,10 +16,11 @@ function M.get(c, opts)
 		["@boolean"] = "Boolean",
 		["@number.float"] = "Float",
 		["@type"] = "Type",
-		["@variable.member"] = "Identifier",
+		["@variable.member"] = "@variable",
 		["@keyword.function"] = "@keyword",
 		["@constructor"] = "Function",
 		["@attribute"] = "PreProc",
+		["@attribute.builtin"] = "@attribute",
 		["@operator"] = "Operator",
 		["@string.escape"] = "Character",
 		["@function.builtin"] = "Special",
@@ -30,119 +31,81 @@ function M.get(c, opts)
 		["@module"] = { fg = c.fg },
 		["@punctuation.bracket"] = "Delimiter",
 		["@punctuation.delimiter"] = { fg = c.subtle },
-
-		-- ["@variable.builtin"] = { fg = c.fg },
-		-- ["@variable.parameter"] = { fg = c.fg },
-
-		-- ["@nospell"] = { fg = c.fg },
-		-- ["@constant.builtin"] = { fg = c.fg },
-
+		["@variable.parameter"] = { fg = c.fg },
+		["@constant.builtin"] = { fg = c.gild },
 		["@annotation"] = "PreProc",
-		--
-		-- -- Literals
 		["@character"] = "Character",
 		["@character.printf"] = "SpecialChar",
 		["@character.special"] = "SpecialChar",
-		--
-		-- -- Constants
-		["@constant.macro"] = "Define",
-		--
-		-- -- Functions
+		["@constant.macro"] = "@constant",
 		["@function.call"] = "@function",
 		["@function.macro"] = "Macro",
 		["@function.method"] = "Function",
 		["@function.method.call"] = "@function.method",
-		--
-		-- -- Keywords
 		["@keyword.conditional"] = "Conditional",
 		["@keyword.debug"] = "Debug",
-		["@keyword.directive"] = "PreProc",
+		["@keyword.directive"] = { fg = c.smoke, italic = true },
 		["@keyword.directive.define"] = "Define",
 		["@keyword.exception"] = "Exception",
 		["@keyword.repeat"] = "Repeat",
 		["@keyword.storage"] = "StorageClass",
-		--
-		-- -- Types / modules
 		["@type.qualifier"] = "@keyword",
 		["@namespace.builtin"] = "@variable.builtin",
-		--
-		-- -- Tags (HTML / JSX / etc)
 		["@tag"] = "Label",
-		["@tag.attribute"] = "@property",
+		["@tag.attribute"] = { fg = c.ichor },
 		["@tag.delimiter"] = "Delimiter",
-		--
-		-- -- Diff
 		["@diff.plus"] = "DiffAdd",
 		["@diff.minus"] = "DiffDelete",
 		["@diff.delta"] = "DiffChange",
-		--
-		-- -- Markup (generic)
 		["@markup"] = "@none",
 		["@markup.environment"] = "Macro",
 		["@markup.environment.name"] = "Type",
 		["@markup.heading"] = "Title",
-		["@markup.link.label"] = "SpecialChar",
 		["@markup.link.label.symbol"] = "Identifier",
-		["@markup.link.url"] = "Underlined",
 		["@markup.math"] = "Special",
 		["@markup.raw"] = "String",
-		--
-		-- -- Misc
+		["@property"] = { fg = c.fg },
+		["@punctuation.special"] = { fg = c.subtle },
 		["@none"] = {},
-		--
-		-- -- =====================================================
-		-- -- Personalización / Overrides
-		-- -- Acá sí vive el diseño del theme
-		-- -- =====================================================
-		--
-		-- -- Comments (semantic)
-		-- ["@comment.error"] = { fg = c.error },
-		-- ["@comment.warning"] = { fg = c.warning },
-		-- ["@comment.info"] = { fg = c.info },
-		-- ["@comment.hint"] = { fg = c.hint },
-		-- ["@comment.note"] = { fg = c.hint },
-		-- ["@comment.todo"] = { fg = c.none },
-		--
-		-- -- Keywords
-		--
-		-- -- Functions / constructors
-		-- ["@constructor.tsx"] = { fg = c.blue1 },
-		--
-		-- -- Variables
-		-- ["@variable.parameter.builtin"] = { fg = c.yellow },
-		--
-		-- -- Properties / labels
-		-- ["@property"] = { fg = c.green },
-		-- ["@label"] = { fg = c.blue },
-		--
-		-- -- Operators & punctuation
-		-- ["@punctuation.special"] = { fg = c.blue },
-		-- ["@punctuation.special.markdown"] = { fg = c.yellow },
-		--
-		-- -- Strings
-		-- ["@string.regexp"] = { fg = c.blue },
-		--
-		-- -- Types
-		-- ["@module.builtin"] = { fg = c.red },
-		--
-		-- -- Markup styling
-		-- ["@markup.emphasis"] = { italic = true },
-		-- ["@markup.italic"] = { italic = true },
-		-- ["@markup.strong"] = { bold = true },
-		-- ["@markup.underline"] = { underline = true },
-		-- ["@markup.strikethrough"] = { strikethrough = true },
-		--
-		-- ["@markup.link"] = { fg = c.cyan },
-		-- ["@markup.list"] = { fg = c.blue1 },
-		-- ["@markup.list.checked"] = { fg = c.green },
-		-- ["@markup.list.unchecked"] = { fg = c.blue },
-		-- ["@markup.list.markdown"] = { fg = c.yellow, bold = true },
-		-- ["@markup.raw.markdown_inline"] = { bg = c.bright_black, fg = c.blue },
-		--
-		-- -- Tags (frontend)
-		-- ["@tag.tsx"] = { fg = c.red },
-		-- ["@tag.javascript"] = { fg = c.red },
-		-- ["@tag.delimiter.tsx"] = { fg = c.blue },
+		["@variable.builtin"] = { fg = c.fg, italic = true },
+		["@comment.nospell"] = { fg = c.smoke, italic = true },
+		["@module.builtin"] = { fg = c.fg },
+		["@markup.italic"] = { italic = true },
+		["@markup.strong"] = { bold = true },
+		["@markup.list"] = { fg = c.jade },
+		["@markup.link.url"] = { fg = c.arcana, underline = true },
+		["@markup.link.label"] = { fg = c.azure },
+		["@markup.link"] = { fg = c.arcana },
+		["@markup.list.checked"] = { fg = c.fg },
+		["@markup.list.unchecked"] = { fg = c.fg_dim },
+		["@markup.emphasis"] = { italic = true },
+		["@markup.underline"] = { underline = true },
+		["@markup.strikethrough"] = { strikethrough = true },
+		["@markup.raw.markdown_inline"] = { fg = c.ember },
+		["@markup.list.markdown"] = { fg = c.jade, bold = true },
+		["@markup.heading.1.markdown"] = { fg = c.jade },
+		["@markup.heading.2.markdown"] = { fg = c.wyrm },
+		["@markup.heading.3.markdown"] = { fg = c.azure },
+		["@markup.heading.4.markdown"] = { fg = c.ember },
+		["@markup.heading.5.markdown"] = { fg = c.arcana },
+		["@markup.heading.6.markdown"] = { fg = c.gild },
+		["@comment.error"] = { fg = c.error },
+		["@comment.warning"] = { fg = c.warning },
+		["@comment.info"] = { fg = c.info },
+		["@comment.hint"] = { fg = c.hint },
+		["@comment.note"] = { fg = c.hint },
+		["@comment.todo"] = { fg = c.hint },
+		["@string.regexp"] = { fg = c.arcana },
+		["@constant.regexp"] = { fg = c.gild },
+		["@punctuation.bracket.regexp"] = "Delimiter",
+		["@label"] = { fg = c.jade }, -- Things outside code on Arcana?
+		["@variable.parameter.builtin"] = { fg = c.fg },
+		["@tag.tsx"] = { fg = c.jade },
+		["@tag.javascript"] = { fg = c.jade },
+		["@tag.builtin"] = { fg = c.jade },
+		["@tag.delimiter.tsx"] = { fg = c.subtle },
+		["@constructor.tsx"] = { fg = c.azure },
+		["@punctuation.special.markdown"] = { fg = c.subtle },
 	}
 
 	return ret
