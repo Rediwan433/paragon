@@ -4,23 +4,59 @@ M.url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
 
 ---@type theme_name.HighlightsFn
 function M.get(c, opts)
-  -- stylua: ignore
-  return {
-    NeoTreeNormal              = { fg = c.fg, bg = c.bg},
-    NeoTreeNormalNC            = { fg = c.fg_dim, bg = c.bg_dim },
+	return {
+		-- Base
+		NeoTreeNormal = { fg = c.fg, bg = c.bg },
+		NeoTreeNormalNC = { fg = c.fg_dim, bg = c.bg },
+		NeoTreeEndOfBuffer = { fg = c.bg, bg = c.bg },
+		NeoTreeSignColumn = { fg = c.fg_dim, bg = c.bg },
+		NeoTreeStatusLine = { fg = c.fg_dim, bg = c.bg },
+		NeoTreeStatusLineNC = { fg = c.fg_dim, bg = c.bg },
+		NeoTreeVertSplit = { fg = c.surface, bg = c.surface },
 
-    NeoTreeDimText             = { fg = c.fg_dim},
-    NeoTreeFileName            = { fg = c.fg},
+		-- Text and files
+		NeoTreeDirectoryName = { fg = c.cyan },
+		NeoTreeDirectoryIcon = { fg = c.cyan },
+		NeoTreeFileName = { fg = c.fg },
+		NeoTreeFileNameOpened = { fg = c.fg, bold = true },
+		NeoTreeFileIcon = { fg = c.fg_dim },
 
-    NeoTreeGitModified  = { fg = c.magenta },
-    NeoTreeGitStaged    = { fg = c.green },
-    NeoTreeGitUntracked = { fg = c.yellow },
+		-- Git status - consistent with gitsigns and other git plugins
+		NeoTreeGitAdded = { fg = c.git.add },
+		NeoTreeGitConflict = { fg = c.error, bold = true },
+		NeoTreeGitDeleted = { fg = c.git.delete },
+		NeoTreeGitIgnored = { fg = c.muted },
+		NeoTreeGitModified = { fg = c.git.change },
+		NeoTreeGitUnstaged = { fg = c.warning },
+		NeoTreeGitUntracked = { fg = c.muted },
+		NeoTreeGitStaged = { fg = c.git.add },
 
-    NeoTreeTabActive           = { fg = c.cyan, bg = c.bg, bold = true },
-    NeoTreeTabSeparatorActive  = { fg = c.cyan, bg = c.bg_dim },
-    NeoTreeTabInactive         = { bg = opts.transparent and c.none or c.bg, fg = c.fg_dim },
-    NeoTreeTabSeparatorInactive= { bg = opts.transparent and c.none or c.bg, fg = c.fg_dim },
-  }
+		-- Symbols
+		NeoTreeModified = { fg = c.warning },
+		NeoTreeHiddenByName = { fg = c.fg_dim },
+		NeoTreeSymbolicLinkTarget = { fg = c.yellow },
+		NeoTreeRootName = { fg = c.fg_dim, bold = true },
+		NeoTreeIndentMarker = { fg = c.muted },
+		NeoTreeExpander = { fg = c.fg_dim },
+
+		-- Float windows
+		NeoTreeFloatNormal = { fg = c.fg, bg = c.surface },
+		NeoTreeFloatBorder = { fg = c.surface, bg = c.surface },
+		NeoTreeFloatTitle = { fg = c.title, bg = c.overlay, bold = true },
+
+		-- Tabs
+		NeoTreeTabActive = { fg = c.cyan, bg = c.bg, bold = true },
+		NeoTreeTabInactive = { fg = c.fg_dim, bg = c.bg },
+		NeoTreeTabSeparatorActive = { fg = c.surface, bg = c.bg },
+		NeoTreeTabSeparatorInactive = { fg = c.surface, bg = c.bg },
+
+		-- Search
+		NeoTreeFilterTerm = { fg = c.search, bold = true },
+		NeoTreeDimText = { fg = c.fg_dim },
+
+		-- Title
+		NeoTreeTitleBar = { fg = c.title, bg = c.overlay, bold = true },
+	}
 end
 
 return M

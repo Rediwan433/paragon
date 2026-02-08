@@ -7,13 +7,13 @@ function M.get(c, opts)
   -- stylua: ignore
   return {
     TelescopeNormal         = { fg = c.fg, bg = c.surface },
-    TelescopePromptNormal = { fg = c.fg, bg = c.bg }, 
+    TelescopePromptNormal = { fg = c.fg, bg = c.surface }, 
     TelescopeResultsNormal= { fg = c.fg_dim, bg = c.surface},
 
     TelescopeSelection     = { fg = c.fg,     bg = c.highlight_high },
     TelescopeResultsComment = { fg = c.fg_dim},
 
-    TelescopeMatching      = { fg = c.match, bold = true },
+    TelescopeMatching      = { fg = c.match },
     TelescopeResultsIdentifier = { fg = c.fg },
 
     TelescopePromptBorder   = { fg = c.surface, bg = c.surface},

@@ -4,7 +4,6 @@ local M = {}
 function M.get(c, opts)
 	return {
 
-		-- COMMENTS
 		["@comment"] = "Comment",
 		["@comment.nospell"] = { fg = c.muted, italic = true },
 		["@comment.error"] = { fg = c.error },
@@ -14,7 +13,6 @@ function M.get(c, opts)
 		["@comment.note"] = { fg = c.hint },
 		["@comment.todo"] = { fg = c.hint },
 
-		-- LITERALS
 		["@string"] = "String",
 		["@string.documentation"] = "@string",
 		["@string.regexp"] = { fg = c.magenta },
@@ -33,7 +31,6 @@ function M.get(c, opts)
 		["@number.float"] = "Float",
 		["@boolean"] = "Boolean",
 
-		-- KEYWORDS & CONTROL FLOW
 		["@keyword"] = "Keyword",
 		["@keyword.return"] = "@keyword",
 		["@keyword.function"] = "@keyword",
@@ -52,7 +49,6 @@ function M.get(c, opts)
 		["@type.qualifier"] = "@keyword",
 		["@label"] = "Label",
 
-		-- FUNCTIONS
 		["@function"] = "Function",
 		["@function.call"] = "@function",
 		["@function.builtin"] = "@function",
@@ -67,7 +63,6 @@ function M.get(c, opts)
 		["@attribute.builtin"] = "@attribute",
 		["@annotation"] = "PreProc",
 
-		-- TYPES
 		["@type"] = "Type",
 		["@type.builtin"] = "@type",
 		["@type.definition"] = "@type",
@@ -82,7 +77,6 @@ function M.get(c, opts)
 		["@tag.delimiter.tsx"] = { fg = c.fg_dim },
 		["@tag.delimiter"] = "Delimiter",
 
-		-- IDENTIFIERS & VARIABLES
 		["@variable"] = { fg = c.fg },
 		["@variable.member"] = "@variable",
 		["@variable.parameter"] = "@variable",
@@ -95,7 +89,6 @@ function M.get(c, opts)
 
 		["@identifier"] = "Identifier",
 
-		-- OPERATORS & PUNCTUATION
 		["@operator"] = "Operator",
 
 		["@punctuation.delimiter"] = "Delimiter",
@@ -104,17 +97,17 @@ function M.get(c, opts)
 		["@punctuation.bracket.regexp"] = "Delimiter",
 		["@punctuation.special.markdown"] = { fg = c.fg_dim },
 
-		-- MARKUP
 		["@none"] = {},
 		["@markup"] = "@none",
 
 		["@markup.heading"] = "Title",
+
 		["@markup.heading.1.markdown"] = { fg = c.green },
 		["@markup.heading.2.markdown"] = { fg = c.cyan },
-		["@markup.heading.3.markdown"] = { fg = c.orange },
-		["@markup.heading.4.markdown"] = { fg = c.magenta },
-		["@markup.heading.5.markdown"] = { fg = c.yellow },
-		["@markup.heading.6.markdown"] = { fg = c.teal },
+		["@markup.heading.3.markdown"] = { fg = c.teal },
+		["@markup.heading.4.markdown"] = { fg = c.yellow },
+		["@markup.heading.5.markdown"] = { fg = c.orange },
+		["@markup.heading.6.markdown"] = { fg = c.magenta },
 
 		["@markup.link"] = { fg = c.fg_dim },
 		["@markup.link.label"] = { fg = c.cyan },

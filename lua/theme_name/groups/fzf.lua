@@ -14,7 +14,7 @@ function M.get(c)
     FzfLuaBorder        = { fg = c.surface, bg = c.surface},
     FzfLuaNormal        = { fg = c.fg, bg = c.surface},
     FzfLuaPreviewTitle  = { fg = c.fg, bg = c.overlay },
-    FzfLuaTitle         = { fg = c.cyan , bg = c.overlay },
+    FzfLuaTitle         = { fg = c.title, bg = c.overlay },
     FzfLuaCursor        = "IncSearch",
     FzfLuaFilePart      = "FzfLuaFzfNormal",
     FzfLuaFzfCursorLine = "Visual",

@@ -6,7 +6,7 @@ M.url = "https://github.com/hrsh7th/nvim-cmp"
 function M.get(c, opts)
   -- stylua: ignore
   local ret = {
-    CmpDocumentation       = { fg = c.surface, bg = c.surface},
+    CmpDocumentation       = { fg = c.fg, bg = c.surface},
     CmpDocumentationBorder = { fg = c.surface, bg = c.surface},
     CmpGhostText           = { fg = c.fg_dim },
     CmpItemAbbr            = { fg = c.fg_dim, bg = c.none},
@@ -19,7 +19,7 @@ function M.get(c, opts)
     CmpItemKindSupermaven  = { fg = c.fg, bg = c.none },
     CmpItemKindDefault     = { fg = c.fg, bg = c.none },
     CmpItemKindTabNine     = { fg = c.fg, bg = c.none },
-    CmpItemMenu            = { fg = c.fg, bg = c.none },
+    CmpItemMenu            = { fg = c.fg, bg = c.surface},
   }
 
 	require("theme_name.groups.kinds").kinds(ret, "CmpItemKind%s")

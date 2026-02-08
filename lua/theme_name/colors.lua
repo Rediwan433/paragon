@@ -41,7 +41,10 @@ function M.setup(opts)
 	colors.info = "#9AD7DA" -- blue
 	colors.hint = "#B8A0D9" -- grey/soft cyan/soft purple
 
+	-- Search & Match - using existing palette colors with dim backgrounds
 	colors.search = colors.yellow
+	colors.search_bg = colors.highlight_med
+	colors.substitute = colors.orange
 	colors.match = colors.yellow
 	colors.title = colors.cyan
 
@@ -49,6 +52,9 @@ function M.setup(opts)
 		add = "#70C270",
 		delete = "#D04E63",
 		change = "#9AD7DA",
+		staged = "none",
+		modified = "none",
+		untracked = "none",
 	}
 
 	colors.diff = {
