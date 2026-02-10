@@ -7,13 +7,13 @@ function M.setup(opts)
 	---@class Palette
 	local palette = {
 		magenta = "#B8A0D5", -- arcana
-		green = "#78CC78", -- jade
+		green = "#72C472", -- jade
 		orange = "#E69A6C", -- ember
-		yellow = "#D9C471", -- gild
+		yellow = "#EAD88A", -- gild
 		cyan = "#9EDFE2", -- azure
-		teal = "#6FA29E", -- ichor
-
-		muted = "#5A6569", -- smoke
+		teal = "#5FB3A3", -- ichor
+		muted = "#839396", -- smoke
+		semantic = "#C3D0D2",
 
 		fg = "#E9F2F2", -- E7F0F0 if 161616
 		bg = "#15181A", -- could be 161616
@@ -52,9 +52,6 @@ function M.setup(opts)
 		add = "#70C270",
 		delete = "#D04E63",
 		change = "#9AD7DA",
-		staged = "none",
-		modified = "none",
-		untracked = "none",
 	}
 
 	colors.diff = {

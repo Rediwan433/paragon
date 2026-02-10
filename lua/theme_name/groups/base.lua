@@ -3,16 +3,16 @@ local M = {}
 ---@type theme_name.HighlightsFn
 function M.get(c, opts)
 	return {
-		Statement = { fg = c.green },
-		Conditional = { fg = c.green },
-		Repeat = { fg = c.green },
+		Statement = { fg = c.green, style = opts.styles.keywords },
+		Conditional = { fg = c.green, style = opts.styles.keywords },
+		Repeat = { fg = c.green, style = opts.styles.keywords },
 		Label = { fg = c.green },
 		Keyword = { fg = c.green, style = opts.styles.keywords },
-		Exception = { fg = c.green },
+		Exception = { fg = c.green, style = opts.styles.keywords },
 		PreProc = { fg = c.magenta },
-		Include = { fg = c.green },
-		StorageClass = { fg = c.green },
-		Structure = { fg = c.green },
+		Include = { fg = c.green, style = opts.styles.keywords },
+		StorageClass = { fg = c.green, style = opts.styles.keywords },
+		Structure = { fg = c.green, style = opts.styles.keywords },
 
 		Define = { fg = c.magenta },
 		Macro = { fg = c.magenta },
@@ -27,24 +27,27 @@ function M.get(c, opts)
 		Special = { fg = c.yellow },
 		SpecialChar = { fg = c.yellow },
 
-		Function = { fg = c.cyan },
+		Function = { fg = c.cyan, style = opts.styles.functions },
 		Identifier = { fg = c.fg },
 
-		Type = { fg = c.teal },
+		Type = { fg = c.teal, style = opts.styles.types },
 
 		Operator = { fg = c.fg_dim },
 		Delimiter = { fg = c.fg_dim },
 
 		Comment = { fg = c.muted, style = opts.styles.comments },
-		SpecialComment = { fg = c.muted, italic = true },
+		SpecialComment = { fg = c.muted, style = opts.styles.comments },
 
 		Error = { fg = c.error },
 		Debug = { fg = c.info },
 		Todo = { fg = c.hint },
 
 		Normal = { fg = c.fg, bg = opts.transparent and c.none or c.bg },
-		NormalNC = { fg = c.fg, bg = opts.transparent and c.none or c.bg_dim },
-		NormalSB = { fg = c.fg, bg = opts.transparent and c.none or c.bg_dim },
+		NormalNC = {
+			fg = c.fg,
+			bg = opts.transparent and c.none or (opts.dim and c.bg_dim or c.bg),
+		},
+		NormalSB = { fg = c.fg, bg = c.bg_dim },
 		Conceal = { fg = c.fg_dim },
 		NonText = { fg = c.fg_dim },
 		SpecialKey = { fg = c.fg_dim },
@@ -63,13 +66,13 @@ function M.get(c, opts)
 		LineNrBelow = { fg = c.fg_dim },
 		CursorLineNr = { fg = c.fg, bold = true },
 
-		SignColumn = { fg = c.fg_dim },
-		SignColumnSB = { fg = c.fg_dim },
+		SignColumn = { fg = c.fg_dim, bg = opts.transparent and c.none or c.bg },
+		SignColumnSB = { fg = c.fg_dim, bg = opts.transparent and c.none or c.bg },
 		Folded = { fg = c.green, bg = opts.transparent and c.none or c.bg },
-		FoldColumn = { fg = c.fg_dim },
+		FoldColumn = { fg = c.fg_dim, bg = opts.transparent and c.none or c.bg },
 
-		VertSplit = { fg = opts.transparent and c.none or c.bg },
-		WinSeparator = { fg = opts.transparent and c.none or c.bg },
+		VertSplit = { fg = c.bg },
+		WinSeparator = { fg = c.bg },
 
 		NormalFloat = { fg = c.fg, bg = c.surface },
 		FloatBorder = { fg = c.surface, bg = c.surface },
@@ -83,8 +86,8 @@ function M.get(c, opts)
 		PmenuMatchSel = { bg = c.highlight_high, fg = c.fg },
 		WildMenu = { bg = c.surface, fg = c.fg_dim },
 
-		StatusLine = { fg = c.fg, bg = opts.transparent and c.none or c.surface },
-		StatusLineNC = { fg = c.fg_dim, bg = opts.transparent and c.none or c.overlay },
+		StatusLine = { fg = c.fg, bg = c.surface },
+		StatusLineNC = { fg = c.fg_dim, bg = c.surface },
 		WinBar = "StatusLine",
 		WinBarNC = "StatusLineNC",
 
@@ -144,7 +147,7 @@ function M.get(c, opts)
 		LspSignatureActiveParameter = { bg = c.highlight_high, bold = true },
 		LspCodeLens = { fg = c.muted },
 		LspInlayHint = { bg = c.highlight_med, fg = c.fg_dim },
-		LspInfoBorder = { fg = c.fg_dim, bg = opts.transparent and c.none or c.overlay },
+		LspInfoBorder = { fg = c.fg_dim, bg = c.overlay },
 
 		SpellBad = { sp = c.error, undercurl = true },
 		SpellCap = { sp = c.warning, undercurl = true },

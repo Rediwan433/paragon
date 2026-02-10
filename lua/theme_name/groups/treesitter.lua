@@ -5,7 +5,7 @@ function M.get(c, opts)
 	return {
 
 		["@comment"] = "Comment",
-		["@comment.nospell"] = { fg = c.muted, italic = true },
+		["@comment.nospell"] = { fg = c.muted, style = opts.styles.comments },
 		["@comment.error"] = { fg = c.error },
 		["@comment.warning"] = { fg = c.warning },
 		["@comment.info"] = { fg = c.info },
@@ -67,21 +67,19 @@ function M.get(c, opts)
 		["@type.builtin"] = "@type",
 		["@type.definition"] = "@type",
 
-		["@property"] = { fg = c.fg },
+		["@property"] = { fg = c.semantic }, -- property
 
 		["@tag"] = "Label",
-		["@tag.tsx"] = "@tag",
-		["@tag.javascript"] = "@tag",
 		["@tag.builtin"] = "@tag",
 		["@tag.attribute"] = { fg = c.teal },
 		["@tag.delimiter.tsx"] = { fg = c.fg_dim },
 		["@tag.delimiter"] = "Delimiter",
 
 		["@variable"] = { fg = c.fg },
-		["@variable.member"] = "@variable",
+		["@variable.member"] = { fg = c.semantic }, -- @variable
 		["@variable.parameter"] = "@variable",
 		["@variable.parameter.builtin"] = "@variable",
-		["@variable.builtin"] = { fg = c.fg, italic = true },
+		["@variable.builtin"] = { fg = c.fg, style = opts.styles.builtins },
 
 		["@module"] = { fg = c.fg },
 		["@module.builtin"] = { fg = c.fg },
@@ -137,6 +135,10 @@ function M.get(c, opts)
 		["@diff.plus"] = "DiffAdd",
 		["@diff.minus"] = "DiffDelete",
 		["@diff.delta"] = "DiffChange",
+
+		-- Lenguage especifics.
+		["@tag.tsx"] = "@tag",
+		["@tag.javascript"] = "@tag",
 	}
 end
 

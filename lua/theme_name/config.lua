@@ -8,14 +8,16 @@ local M = {}
 ---@field on_colors fun(colors: theme_name.ColorScheme)
 ---@field on_highlights fun(highlights: theme_name.Highlights, colors: theme_name.ColorScheme)
 M.defaults = {
-	transparent = false, -- Enable this to disable setting the background color
-	terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
+	transparent = false,
+	dim = true,
 	styles = {
-		comments = { italic = true },
-		keywords = { italic = true },
-		functions = {},
-		variables = {},
+		keywords = {}, -- if, for, return, break, continue
+		functions = {}, -- function foo(), def foo()
+		types = {}, -- class, struct, int, enum
+		comments = { italic = true }, -- -- comentarios
+		builtins = { italic = true }, -- print(), self, true, false
 	},
+	terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
 
 	---@param colors theme_name.ColorScheme
 	on_colors = function(colors) end,

@@ -6,7 +6,7 @@ function M.setup(opts)
 	local colors = require("theme_name.colors").setup(opts)
 	local groups = require("theme_name.groups").setup(colors, opts)
 
-	-- vim.cmd("highlight clear")
+	vim.cmd("highlight clear")
 
 	if vim.fn.exists("syntax_on") == 1 then
 		vim.cmd("syntax reset")
