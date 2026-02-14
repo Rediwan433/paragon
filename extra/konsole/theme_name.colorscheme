@@ -1,0 +1,78 @@
+# --- special colors ---
+
+[Background]
+Color=24,26,28
+
+[BackgroundIntense]
+Color=24,26,28
+
+[Foreground]
+Color=233,242,242
+
+[ForegroundIntense]
+Color=233,242,242
+Bold=true
+
+# --- standard colors ---
+
+# black
+[Color0]
+Color=19,22,24
+
+[Color0Intense]
+Color=51,56,60
+
+# red
+[Color1]
+Color=208,78,99
+
+[Color1Intense]
+Color=240,128,144
+
+# green
+[Color2]
+Color=114,196,114
+
+[Color2Intense]
+Color=136,232,136
+
+# yellow
+[Color3]
+Color=234,216,138
+
+[Color3Intense]
+Color=255,242,176
+
+# blue
+[Color4]
+Color=158,223,226
+
+[Color4Intense]
+Color=208,255,255
+
+# magenta
+[Color5]
+Color=184,160,213
+
+[Color5Intense]
+Color=216,197,240
+
+# cyan
+[Color6]
+Color=95,179,163
+
+[Color6Intense]
+Color=136,224,208
+
+# white
+[Color7]
+Color=233,242,242
+
+[Color7Intense]
+Color=245,250,250
+
+# --- general options ---
+
+[General]
+Description=theme_name – Minimalist dark theme
+Opacity=1
