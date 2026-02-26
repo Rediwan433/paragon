@@ -1,0 +1,13 @@
+{
+    "name": "Paragon",
+    "tab": {
+        "background": "#181A1C",
+        "unfocusedBackground": "#131618"
+    },
+    "tabRow": {
+        "background": "#181A1C"
+    },
+    "window": {
+        "applicationTheme": "dark"
+    }
+}

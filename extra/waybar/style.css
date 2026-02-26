@@ -36,7 +36,7 @@
 }
 
 #workspaces button:hover {
-    color: #9edfe2;
+    color: #a5e9f5;
 }
 
 #clock {
@@ -68,7 +68,7 @@
 }
 
 #network.disconnected {
-    color: #d04e63;
+    color: #e0617a;
 }
 
 tooltip {

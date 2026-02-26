@@ -1,5 +1,4 @@
 .tests/
-# tests/
-# .lazy.lua
-# extras/
-# *.md
+.opencode/
+.tests/langs/
+AGENTS.md

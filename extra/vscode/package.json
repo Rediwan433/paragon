@@ -1,0 +1,22 @@
+{
+    "name": "Paragon",
+    "displayName": "Paragon",
+    "description": "A carefully crafted dark theme focused on readability, balanced contrast, and elegant color harmony.",
+    "version": "1.0.0",
+    "publisher": "nnavales",
+    "engines": {
+        "vscode": "^1.74.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Paragon",
+                "uiTheme": "vs-dark",
+                "path": "./theme.json"
+            }
+        ]
+    }
+}

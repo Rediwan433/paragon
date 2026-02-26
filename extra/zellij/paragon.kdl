@@ -1,0 +1,15 @@
+themes {
+    paragon {
+        fg "#E9F2F2"
+        bg "#181A1C"
+        black "#131618"
+        red "#E0617A"
+        green "#8FCF7A"
+        yellow "#D9CC58"
+        blue "#A5E9F5"
+        magenta "#D78CF0"
+        cyan "#46C2A8"
+        white "#E9F2F2"
+        orange "#E9A96E"
+    }
+}

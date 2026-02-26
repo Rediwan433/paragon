@@ -1,0 +1,25 @@
+[colors]
+background=181A1C
+foreground=E9F2F2
+
+regular0=131618     
+regular1=E0617A    
+regular2=8FCF7A   
+regular3=D9CC58  
+regular4=A5E9F5 
+regular5=D78CF0     
+regular6=46C2A8    
+regular7=E9F2F2   
+
+bright0=33383C   
+bright1=F1738D  
+bright2=9FDC8A 
+bright3=E6D667
+bright4=B7F2FC      
+bright5=E39AF8     
+bright6=5FD3BA    
+bright7=F5FAFA   
+
+flash=D9CC58    
+
+cursor=E9F2F2 181A1C

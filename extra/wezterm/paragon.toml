@@ -1,0 +1,44 @@
+[colors]
+foreground = "#E9F2F2"
+background = "#181A1C"
+cursor_bg = "#E9F2F2"
+cursor_border = "#E9F2F2"
+cursor_fg = "#181A1C"
+selection_bg = "#33383C"
+selection_fg = "#E9F2F2"
+split = "#272C2F"
+compose_cursor = "#D78CF0"
+scrollbar_thumb = "#33383C"
+
+ansi = ["#131618", "#E0617A", "#8FCF7A", "#D9CC58", "#A5E9F5", "#D78CF0", "#46C2A8", "#E9F2F2"]
+brights = ["#33383C", "#F1738D", "#9FDC8A", "#E6D667", "#B7F2FC", "#E39AF8", "#5FD3BA", "#F5FAFA"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#272C2F"
+background = "#181A1C"
+
+[colors.tab_bar.active_tab]
+fg_color = "#E9F2F2"
+bg_color = "#1B1E20"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#6E797E"
+bg_color = "#1F2225"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#E9F2F2"
+bg_color = "#1F2225"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#E9F2F2"
+bg_color = "#181A1C"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#6E797E"
+bg_color = "#181A1C"
+
+[metadata]
+aliases = []
+author = "nnahuel"
+name = "Paragon"

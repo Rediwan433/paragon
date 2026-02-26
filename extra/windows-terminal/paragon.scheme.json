@@ -1,0 +1,26 @@
+{
+    "name": "Paragon",
+
+    "cursorColor": "#E9F2F2",
+    "selectionBackground": "#33383C",
+
+    "background": "#181A1C",
+    "foreground": "#E9F2F2",
+
+    "black": "#131618",
+    "blue": "#A5E9F5",
+    "cyan": "#46C2A8",
+    "green": "#8FCF7A",
+    "purple": "#D78CF0",
+    "red": "#E0617A",
+    "white": "#E9F2F2",
+    "yellow": "#D9CC58",
+    "brightBlack": "#33383C",
+    "brightBlue": "#B7F2FC",
+    "brightCyan": "#5FD3BA",
+    "brightGreen": "#9FDC8A",
+    "brightPurple": "#E39AF8",
+    "brightRed": "#F1738D",
+    "brightWhite": "#F5FAFA",
+    "brightYellow": "#E6D667"
+}
