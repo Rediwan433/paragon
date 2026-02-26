@@ -19,11 +19,11 @@
 </p>
 
 <p align="center">
-  <img src="assets/paragon_preview1.png"  alt="Paragon Preview" />
+  <img src="assets/paragon_preview3.png"  alt="Paragon Preview" />
 </p>
 
 <p align="center">
-  <img src="assets/paragon_preview1.png"  alt="Paragon Preview" />
+  <img src="assets/paragon_preview4.png"  alt="Paragon Preview" />
 </p>
 
 <p align="center">
