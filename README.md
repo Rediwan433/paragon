@@ -7,8 +7,7 @@
 </p>
 
 <p align="center">
-    Paragon is a carefully crafted dark theme for Neovim and multiple editor ports, focused on readability, balanced contrast, and elegant color harmony.
-    Every color serves a specific semantic purpose, creating a clear visual hierarchy that enhances code comprehension and reduces eye strain during long coding sessions. 
+    A refined dark theme for Neovim, designed for semantic clarity and long, distraction-free coding sessions.
 </p>
 
 <details>
@@ -21,12 +20,10 @@
 </details>
 
 ## Features
-- **Eye Comfort**: Designed for long sessions with carefully balanced contrast ratios that reduce eye strain without sacrificing readability.
-- **Superior Legibility**: Clear visual hierarchy where every color serves a purpose, making code structure instantly recognizable.
-- **Thoughtful Color System**: Each color is chosen for its semantic meaning, not aesthetics alone—syntax highlighting that helps you understand code faster.
-- **30+ Plugin Integrations**: Native support for popular plugins including [nvim-cmp](https://github.com/hrsh7th/nvim-cmp), [Telescope](https://github.com/nvim-telescope/telescope.nvim), [Lualine](https://github.com/nvim-lualine/lualine.nvim), [Gitsigns](https://github.com/lewis6991/gitsigns.nvim), and many more.
-- **30+ Terminal, IDE & Tool Ports**: Consistent colors across your entire workflow: terminals ([Kitty](https://sw.kovidgoyal.net/kitty), [Alacritty](https://github.com/alacritty/alacritty), [WezTerm](https://wezfurlong.org/wezterm), [Ghostty](https://github.com/ghostty-org/ghostty)), editors ([Vim](https://www.vim.org), [VS Code](https://code.visualstudio.com)), CLI and more tools.
-- **Flexible Customization** – Fine-grained control over transparency, inactive window dimming, floating borders, and syntax styles.
+- **30+ Cross-Tool Ports** – Terminals, editors, and CLI tools.
+- **30+ Plugin Integrations** – Native support for major Neovim plugins.
+- **Semantic & Balanced Design** – Purposeful highlights with refined contrast for long sessions.
+- **Flexible Customization** – Transparency, dimming, borders, and syntax styling.
 
 <details>
 <summary>Ports</summary>
